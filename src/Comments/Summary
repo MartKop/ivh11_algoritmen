@@ -1,0 +1,51 @@
+Les 1 ------------------------------------------------------------------------------------
+Probleem 'Traveling salesman problem' met factor N -> mogelijkheden -> Brute Force Time
+Doelen algorithms en data structures
+
+Unsorted List O(n) - Sorted list O(log n) -> Time needed
+
+Primitieven algoritme
+Sieve of Eratosthenes -> Integer[] ->
+    -> filter multiples of 2 (except 2)
+    -> filter multiples of 3 (except 3)
+    -> foreach leftover number
+    -> only prime numbers left
+
+Complexietijd van een algoritme
+    - Usage of CPU-power (== time)
+    - Usage of memory
+
+Les 2 ------------------------------------------------------------------------------------
+
+Recursion
+- Advantages
+    Elegant, short, powerful algorithms
+    Close to the essential nature of the problem
+- Disadvantages
+    Risk of stack overflow
+    Memory complexity worse than iterative
+
+Recursive algorithms can usually be transformed into an iterative version
+For tail-recursive algorithms, some compilers can do this
+
+public void tail(int n)
+{
+   if(n == 1))
+      return;
+   else
+      System.out.println(n);
+   tail(n-1);
+}
+
+public void head(int n)
+{
+   if(n == 0)
+      return;
+   else
+      head(n-1);
+   System.out.println(n);
+}
+
+Les 3 ------------------------------------------------------------------------------------
+
+HEAP en STACK
