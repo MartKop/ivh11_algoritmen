@@ -1,0 +1,64 @@
+Tijdcomplexiteit
+O(n)
+linear complexity
+for(int i = 0; i < n; i++) {
+    doshizzle
+}
+if n gets twice as big, the time consumed is still 1 loop -> so also twice as big
+
+logarithmic complexity
+binary search
+- Best Case: O(1) or constant complexity;
+- Expected Case: O(log n)
+- Worst Case: O(log n)
+if n gets twice as big, the time consumed is (log n) bigger
+so for n *10 time becomes O(n + 1)
+
+unordered
+- Best Case: O(1)
+- Expected Case: O(n)
+- Worst Case: O(n)
+
+Bubble sort -> O(n^2)
+Bucket sort -> O(n) -> zolang de lengte van de array groter is dan het hoogste getal anders O(n+m)
+
+O(!)
+factorial (Travelling Salesman Problem)
+1! = 1 = 1
+2! = 2 × 1 = 2
+3! = 3 × 2 × 1 = 6
+4! = 4 × 3 × 2 × 1 = 24
+5! = 5 × 4 × 3 × 2 × 1 = 120
+6! = 6 × 5 × 4 × 3 × 2 × 1 = 720
+7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040
+
+Rekencomplexiteit
+O(1)
+for(int i = 0; i < n; i++) {
+    doshizzle
+}
+if n gets twice as big, the time memory is used
+
+
+Tijdcomplexiteit
+int sum = 0;
+int n = ...;
+
+A: O(n) -> n 2x groter, loop duurt 2x langer
+for ( int i = 0; i < n; i++) sum++;
+
+for ( int i = 0; i < n; i++) 
+    for ( int j = 0; j < n; j++) sum++;
+B: O(n^2) -> 1 malig geneste lus -> n * n
+
+for ( int i = 0; i < n; i++) 
+    for ( int j = 0; j < n * n; j++) sum++;
+C: O(n^3) -> n uit lus 1 maal n * n uit lus 2 -> n^3
+
+for ( int i = 0; i < n; i++) 
+    for ( int j = 0; j < i; j++) sum++;
+D: O(n^2)
+
+Rekencomplixiteit
+wordt in bovenstaande voorbeelden maar met 1 variabele gewerkt.
+

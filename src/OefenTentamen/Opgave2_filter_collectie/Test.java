@@ -28,24 +28,36 @@ public class Test {
         linkedList.add(5);
         linkedList.add(9);
 
-        Collection resultArrayList = findDuplicatesInList(collection);
-        Collection resultLinkedList = findDuplicatesInList(linkedList);
+        Collection resultArrayList = returnDuplicates(collection);
+        Collection resultLinkedList = returnDuplicates(linkedList);
 
 
         System.out.println(resultArrayList.size());
         System.out.println(resultLinkedList.size());
     }
 
-    public static Collection findDuplicatesInList(List<Integer> list) {
-        Set<Integer> unique = new HashSet<>();
-        List<Number> duplicates = new ArrayList<>();
-        for(Integer n : list ) {
-            if(!unique.add(n) && !duplicates.contains(n)) {
-                duplicates.add(n);
+    public static <E> Collection<E> returnDuplicates(Collection<E> list){
+        Set<E> unique = new HashSet<>();
+        Collection collection;
+
+        if (list instanceof LinkedList) {
+           collection = new LinkedList<E>();
+        } else {
+            collection = new ArrayList<E>();
+//            try {
+//                collection = list.getClass().newInstance();
+//            } catch (Exception e) {
+//                collection = new HashSet<E>();
+//            }
+        }
+
+        for(E element : list ) {
+            if(!unique.add(element) && !collection.contains(element)) {
+                collection.add(element);
             }
         }
-        return duplicates;
-    }
 
+        return collection;
+    }
 }
 

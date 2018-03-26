@@ -4,8 +4,6 @@ public class Test {
 
     public static void main(String[] args) {
         System.out.println(binaryToDecimal("10001"));
-
-
     }
 
     public static int binaryToDecimal(String binaryString) {
