@@ -5,6 +5,12 @@ import java.util.List;
 
 public class main2 {
 
+//    formule voor getal aan de buitenkant van het vierkant
+//    a = n * n
+//    b = 1+2+3+....+a
+//    c = b / n
+//    c = getal aan de buitenkant
+
     public static void main(String[] args) {
         MagicSquare ms = new MagicSquare();
 
