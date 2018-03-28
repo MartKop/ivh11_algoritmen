@@ -15,7 +15,7 @@ public class main2 {
         MagicSquare ms = new MagicSquare();
 
         List<Integer[]> solutions = new LinkedList<>();
-        ms.solveSquare(new Integer[9], 0, solutions);
+//        ms.solveSquare(new Integer[3], 3, solutions);
         for (Integer[] square : solutions) {
             for (int i = 0; i < square.length; i++)
                 System.out.print(square[i] + " ");

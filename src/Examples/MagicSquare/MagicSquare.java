@@ -4,28 +4,7 @@ import java.util.List;
 
 public class MagicSquare {
 
-    private boolean numberUsed(Integer[] square, int i, int num){
-        for (int j = 0; j < i; j++)
-            if(square[j] == num) return true;
-
-        return false;
-    }
-
-    public void solveSquare(Integer[] square, int i, List<Integer[]> solutions){
-        if(i == square.length){
-            if(checkAnswer(square))
-                solutions.add(square.clone());
-        }
-        else{
-            for (int num = 1; num <= square.length; num++) {
-                if(numberUsed(square, i, num)) continue;
-                square[i] = num;
-                solveSquare(square, i+1, solutions);
-            }
-        }
-    }
-
-    public boolean checkAnswer(Integer[] square){
+    public boolean checkAnswer(int[] square){
 
         int size = (int)Math.sqrt(square.length);
         int constant = ((int)Math.pow(size, 3) + size) / 2;
